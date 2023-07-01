@@ -1,0 +1,45 @@
+guid: 9aca5862-839f-4d64-a00e-ad6afcec4364
+answer:
+  name: Ravi Basic Answer 1
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Brand1] [Discount] [Quantity] [Order Date] [Order Date].monthly"
+  answer_columns:
+  - name: Brand1
+  - name: Total Discount
+  - name: Total Quantity
+  - name: Month(Order Date)
+  table:
+    table_columns:
+    - column_id: Brand1
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(Order Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    - column_id: Total Quantity
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Brand1
+    - Month(Order Date)
+    - Total Discount
+    - Total Quantity
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: STACKED_COLUMN
+    chart_columns:
+    - column_id: Brand1
+    - column_id: Month(Order Date)
+    - column_id: Total Discount
+    - column_id: Total Quantity
+    axis_configs:
+    - x:
+      - Month(Order Date)
+      "y":
+      - Total Discount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"16996718-d2c8-49a4-9bb5-e9f5ded70758\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"5186777a-5077-48f2-960d-7f35028803fa\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
